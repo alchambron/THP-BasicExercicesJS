@@ -82,4 +82,22 @@ console.log(find_id(133712))
 
 // ==================== Question 6 ==============================
 
+console.log("-6- Alphabetical order except 133712")
+console.log("---------------------------------------")
+
+books.sort((a, b) => {
+  let x = a.title.toLowerCase();
+  let y = b.title.toLowerCase();
+  if (x < y) {return -1;}
+  if (x > y) {return 1;}
+  return 0;
+});
+
+var remove_title = 133712
+
+let final = books.filter(item => {
+  return item.id !== remove_title
+})
+
+console.log(final)
 
